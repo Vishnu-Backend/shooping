@@ -88,22 +88,26 @@
     class="md:hidden bg-white shadow-md mt-2 p-4 rounded-md space-y-3"
   >
     <a
-      routerLink="/"
+      routerLink="/home"
+      (click)="menuOpen = false"
       class="block text-gray-700 hover:text-black cursor-pointer transform transition-transform hover:scale-105 hover:shadow-lg font-semibold flex items-center space-x-2 px-2 py-1 hover:border hover:border-gray-300 hover:rounded-md"
       >Home</a
     >
     <a
       routerLink="/product"
+      (click)="menuOpen = false"
       class="block text-gray-700 hover:text-black cursor-pointer transform transition-transform hover:scale-105 hover:shadow-lg font-semibold flex items-center space-x-2 px-2 py-1 hover:border hover:border-gray-300 hover:rounded-md"
       >Product</a
     >
     <a
       routerLink="/contacts"
-      class="block text-gray-700 hover:text-blue-600 cursor-pointer transform transition-transform hover:scale-105 hover:shadow-lg px-2 py-1 rounded"
+      (click)="menuOpen = false"
+      class="block text-gray-700 hover:text-black cursor-pointer transform transition-transform hover:scale-105 hover:shadow-lg font-semibold flex items-center space-x-2 px-2 py-1 hover:border hover:border-gray-300 hover:rounded-md"
       >Contacts</a
     >
     <a
       routerLink="/location"
+      (click)="menuOpen = false"
       class="block text-gray-700 hover:text-black cursor-pointer transform transition-transform hover:scale-105 hover:shadow-lg font-semibold flex items-center space-x-2 px-2 py-1 hover:border hover:border-gray-300 hover:rounded-md"
 
       >Location</a
@@ -112,6 +116,7 @@
     <!-- Login (Mobile only) -->
     <a
       routerLink="/login"
+      (click)="menuOpen = false"
       class="block text-gray-700 hover:text-black cursor-pointer transform transition-transform hover:scale-105 hover:shadow-lg font-semibold flex items-center space-x-2 px-2 py-1 hover:border hover:border-gray-300 hover:rounded-md"
       >
       <svg
