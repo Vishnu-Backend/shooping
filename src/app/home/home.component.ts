@@ -89,13 +89,4 @@ export class HomeComponent implements OnInit, OnDestroy {
     return product.id || index;
   }
 
-  subscribeNewsletter(): void {
-    if (this.newsletterEmail.trim()) {
-      console.log('Subscribed email:', this.newsletterEmail);
-      alert(`Thank you for subscribing, ${this.newsletterEmail}!`);
-      this.newsletterEmail = '';
-    } else {
-      alert('Please enter a valid email address.');
-    }
-  }
 }
