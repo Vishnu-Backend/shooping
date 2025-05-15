@@ -1,0 +1,5 @@
+/* styles.scss or header.component.scss */
+.nav-link {
+    @apply block text-gray-700 hover:text-black cursor-pointer transform transition-transform hover:scale-105 hover:shadow-lg font-semibold flex items-center space-x-2 px-2 py-1 hover:border hover:border-gray-300 hover:rounded-md;
+  }
+  
