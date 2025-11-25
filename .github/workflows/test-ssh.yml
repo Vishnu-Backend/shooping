@@ -1,0 +1,30 @@
+name: Test SSH Connection
+
+on:
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  test-ssh:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Test SSH Connection
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        password: ${{ secrets.VPS_PASSWORD }}
+        port: ${{ secrets.VPS_PORT }}
+        script: |
+          echo "========================================="
+          echo "SSH Connection Successful!"
+          echo "========================================="
+          echo "Hostname: $(hostname)"
+          echo "Current User: $(whoami)"
+          echo "Current Directory: $(pwd)"
+          echo "Operating System: $(uname -a)"
+          echo "Date: $(date)"
+          echo "========================================="
+          echo "Uptime:"
+          uptime
+          echo "========================================="
